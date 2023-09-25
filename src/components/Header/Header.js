@@ -1,5 +1,5 @@
 import "./Header.css";
-import avatarImage from "../../images/avatar_kif.png";
+import avatarImage from "../../images/avatar.svg";
 import wtwrLogo from "../../images/logo.svg";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import { Link } from "react-router-dom";
@@ -34,7 +34,7 @@ const Header = ({ onCreateModal, city }) => {
           </button>
         </div>
         <Link to="/profile" className="header__profile-link">
-          <div>Kif Francis</div>
+          <div>Braden Jackson</div>
         </Link>
         <div>
           <img src={avatarImage} alt="logo" className="header__avatar-image" />

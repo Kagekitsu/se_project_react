@@ -25,3 +25,11 @@ export const parseLocation = (data) => {
 
   return city;
 };
+
+export const parseDaytime = (data) => {
+  const sunset = data.sys.sunset;
+  const currentTime = Math.floor(Date.now() / 1000);
+  if (currentTime < sunset) {
+    return true;
+  } else return false;
+};

@@ -1,7 +1,6 @@
 import React from "react";
-// import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
-import avatarImage from "../../images/avatar_kif.png";
+import avatarImage from "../../images/avatar.svg";
 import "./Profile.css";
 import SideBar from "../SideBar/SideBar.js";
 
