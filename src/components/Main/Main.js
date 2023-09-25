@@ -2,34 +2,43 @@ import WeatherCard from "../WeatherCard/WeatherCard.js";
 import ItemCard from "../ItemCard/ItemCard";
 import { defaultClothingItems } from "../../utils/constants.js";
 import "./Main.css";
+import { useContext } from "react";
+import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
 
-const Main = ({ weatherTemp, onSelectCard }) => {
-  const getWeatherType = (temperature) => {
-    if (temperature >= 86) {
+const Main = ({ weatherTemp, onSelectCard, dayOrNight, clothingArr }) => {
+  const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
+
+  const getWeatherType = (temp) => {
+    if (currentTemperatureUnit === "C") {
+      temp = (temp * 9) / 5 + 32;
+    }
+    if (temp >= 86) {
       return "hot";
-    } else if (temperature >= 66 && temperature <= 85) {
+    } else if (temp >= 66 && temp <= 85) {
       return "warm";
-    } else if (temperature <= 65) {
+    } else if (temp <= 65) {
       return "cold";
     }
   };
 
-  const weatherType = getWeatherType(weatherTemp);
+  const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || "";
 
-  const filteredCards = defaultClothingItems.filter((item) => {
+  const weatherType = getWeatherType(temp);
+
+  const filteredCards = clothingArr.filter((item) => {
     return item.weather.toLowerCase() === weatherType;
   });
 
   return (
     <main className="main">
-      <WeatherCard day={true} type="sunny" weatherTemp={weatherTemp} />
+      <WeatherCard day={dayOrNight} type="cloudy" weatherTemp={temp} />
       <section id="clothing-section" className="clothing">
         <div className="clothing__intro">
-          Today is {weatherTemp}° F / You may want to wear:
+          Today is {temp}° {currentTemperatureUnit} / You may want to wear:
         </div>
         <div className="clothing__cards">
-          {filteredCards.map((item, index) => (
-            <ItemCard item={item} onSelectCard={onSelectCard} key={item._id} />
+          {filteredCards.map((item) => (
+            <ItemCard item={item} onSelectCard={onSelectCard} key={item.id} />
           ))}
         </div>
       </section>

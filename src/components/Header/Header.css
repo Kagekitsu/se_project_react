@@ -1,35 +1,87 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 60px;
-    padding: 0 20px;
-    font-family: "CabinetGrotesk-Bold", serif;
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  padding: 0 20px;
+  font-family: "CabinetGrotesk-Bold", serif;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+.header__add-clothes-button {
+  font-family: "CabinetGrotesk-Bold", serif;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__add-clothes-button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header__logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header__logo-image {
+  cursor: pointer;
+}
+
+.header__logo-image:hover {
+  fill: rgb(0, 0, 0, 0.5);
+}
+
+.header__avatar-logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header__profile-link {
+  cursor: pointer;
+  color: #000;
+
+  text-decoration: none;
+}
+
+.header__profile-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header__profile-link:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.header__avatar-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+@media all and (max-width: 660px) {
+  .clothing_card__card_image {
+    width: 164px;
+    height: 164px;
+    padding: 0px;
   }
-  
-  .header__add-clothes-button {
-    font-family: "CabinetGrotesk-Bold", serif;
-    font-size: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
+
+  .clothing_card__card_name {
+    top: 7px;
+    height: 15px;
+    width: 50px;
   }
-  
-  .header__add-clothes-button:hover {
-    color: rgba(0, 0, 0, 0.6);
-  }
-  
+
   .header__logo {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  
-  .header__avatar-logo {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
+}

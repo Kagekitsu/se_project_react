@@ -1,52 +1,52 @@
-.switch{
+.toggleswitch {
     display: flex;
     position: relative;
-}
-
-.switchbox{
+  }
+  
+  .toggleswitch__checkbox {
     border-radius: 25px;
-    border: 2px solid #000;
-    width: 50px;
-    height: 30px;
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    width: 57px;
+    height: 33px;
     appearance: none;
-}
-
-.switch__slider{
+  }
+  
+  .toggleswitch__slider {
     border-radius: 20px;
     width: 30px;
     height: 30px;
-    background-color: #000;
     color: #fff;
     text-align: center;
+    background-color: #000;
     cursor: pointer;
     position: absolute;
-}
-
-.switch__slider-F{
-    top: 3px;
-    left: 28px;
-}
-
-.switch__slider-C{
-    top: 3px;
-    left: 5px;
-}
-
-.switch__temp-F{
+  }
+  
+  .toggleswitch__slider-F {
+    right: 26px;
+    top: 2px;
+  }
+  
+  .toggleswitch__slider-C {
+    right: 1px;
+    top: 2px;
+  }
+  
+  .toggleswitch__temp-F {
     position: absolute;
-    top: -7px;
-    left: 38px;
-    color: #fff;
-}
-
-.switch__temp-C{
+    top: -15px;
+    right: 37px;
+    color: rgb(0, 0, 0, 0.5);
+  }
+  
+  .toggleswitch__temp-C {
+    color: rgb(0, 0, 0, 0.5);
     position: absolute;
-    top: -7px;
-    left: 14px;
-    color: #fff;
-}
-
-.switch__active{
-    font-size: 16px;
-    color: #fff;
-}
+    top: -15px;
+    right: 9px;
+  }
+  
+  .toggleswitch__active {
+    color: white;
+  }
+  
