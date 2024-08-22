@@ -6,8 +6,8 @@
   .toggleswitch__checkbox {
     border-radius: 25px;
     border: 2px solid rgb(0, 0, 0, 0.5);
-    width: 57px;
-    height: 33px;
+    width: 50px;
+    height: 30px;
     appearance: none;
   }
   
@@ -23,30 +23,31 @@
   }
   
   .toggleswitch__slider-F {
-    right: 26px;
-    top: 2px;
+    left: 28px;
+    top: 3px;
   }
   
   .toggleswitch__slider-C {
-    right: 1px;
-    top: 2px;
+    left: 5px;
+    top: 3px;
   }
   
   .toggleswitch__temp-F {
     position: absolute;
-    top: -15px;
-    right: 37px;
-    color: rgb(0, 0, 0, 0.5);
+    top: -3px;
+    left: 30px;
+    color: #fff;
   }
   
   .toggleswitch__temp-C {
-    color: rgb(0, 0, 0, 0.5);
     position: absolute;
-    top: -15px;
-    right: 9px;
+    top: -7px;
+    left: 14px;
+    color: #fff;
   }
   
   .toggleswitch__active {
     color: white;
+    font-size: 16px;
   }
   
